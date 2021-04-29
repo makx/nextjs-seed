@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -19,10 +20,12 @@
     }
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
-    ]
+    "linters": {
+      "*.@(ts|tsx)": [
+        "yarn lint",
+        "yarn format"
+      ]
+    }
   },
   "dependencies": {
     "next": "10.1.3",
