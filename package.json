@@ -14,12 +14,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "linters": {
-      "*.@(ts|tsx)": [
-        "yarn lint",
-        "yarn format"
-      ]
-    }
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "next": "10.1.3",
