@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { App } from '../components/App';
-console.log('nana')
+import { App } from '../components/App'
+
 export default function Home(): JSX.Element {
   return (
     <div className={styles.container}>
